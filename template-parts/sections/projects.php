@@ -1,16 +1,18 @@
 <?php
 global $freelancershub_section_id;
-$freelancershub_section_meta = get_post_meta($freelancershub_section_id,'freelancershub_section_reports',true);
-$freelancershub_reports_heading = $freelancershub_section_meta['freelancershub_reports_title'];
-$freelancershub_reports_subheading = $freelancershub_section_meta['freelancershub_reports_subtitle'];
+$freelancershub_section_meta = get_post_meta($freelancershub_section_id,'freelancershub_section_projects',true);
+$freelancershub_reports_heading = $freelancershub_section_meta['freelancershub_projects_title'];
+$freelancershub_reports_subheading = $freelancershub_section_meta['freelancershub_projects_subtitle'];
 
 ?>
 
 <section class="project-section">
     <div class="container">
         <div class="section-title">
-            <span>Project</span>
-            <h3>Our Project For Client</h3>
+            <?php if ($freelancershub_reports_heading){ ?>
+            <span><?php echo esc_html($freelancershub_reports_subheading);?></span>
+            <h3><?php echo esc_html($freelancershub_reports_heading);?></h3>
+            <?php } ?>
         </div>
 
         <ul class="filter-menu">

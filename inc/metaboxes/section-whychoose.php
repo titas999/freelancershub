@@ -45,15 +45,45 @@ if( class_exists( 'CSF' ) ) {
                 'id'    => 'freelancershub_whychoose_subtitle',
                 'type'  => 'text',
                 'title' => __('Section Subtitle', 'freelancershub'),
-
             ),
             array(
                 'id'    => 'freelancershub_whychoose_content',
                 'type'  => 'textarea',
                 'title' => __('Section Content', 'freelancershub'),
+            ),
+            array(
+                'id'        => 'whychoose_group',
+                'type'      => 'group',
+                'title'     => __('Why Choose Items','freelancershub'),
+                'fields'    => array(
+                    array(
+                        'id'    => 'whychoose_item_title',
+                        'type'  => 'text',
+                        'title' => __('Item Title','freelancershub')
+                    ),
+                    array(
+                        'id'    => 'whychoose_item_description',
+                        'type'  => 'textarea',
+                        'title' => __('Item Description','freelancershub')
+                    ),
+                ),
+            ),
+            array(
+                'id'    => 'freelancershub_whychoose_btn_text',
+                'type'  => 'text',
+                'title' => __('Button Text', 'freelancershub'),
 
             ),
-        
+            array(
+                'id'    => 'freelancershub_whychoose_btn_url',
+                'type'  => 'text',
+                'title' => __('Button URL', 'freelancershub'),
+            ),
+            array(
+                'id'    => 'freelancershub_whychoose_image',
+                'type'  => 'upload',
+                'title' => __('Image Upload', 'freelancershub'),
+            ),
 
         )
     ) );

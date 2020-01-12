@@ -1,16 +1,18 @@
 <?php
 global $freelancershub_section_id;
-$freelancershub_section_meta = get_post_meta($freelancershub_section_id,'freelancershub_section_counter',true);
-$freelancershub_counter_heading = $freelancershub_section_meta['freelancershub_counter_title'];
-$freelancershub_counter_subheading = $freelancershub_section_meta['freelancershub_counter_subtitle'];
+$freelancershub_section_meta = get_post_meta($freelancershub_section_id,'freelancershub_section_tab',true);
+$freelancershub_counter_heading = $freelancershub_section_meta['freelancershub_tab_section_title'];
+$freelancershub_counter_subheading = $freelancershub_section_meta['freelancershub_tab_section_subtitle'];
 ?>
 
 <section class="tab-section">
     <div class="container">
+        <?php if (isset($freelancershub_counter_heading)){ ?>
         <div class="section-title">
-            <span>Boosting</span>
-            <h3>Outstanding Digital Experience</h3>
+            <span><?php echo esc_html($freelancershub_counter_subheading);?></span>
+            <h3><?php echo esc_html($freelancershub_counter_heading);?></h3>
         </div>
+        <?php } ?>
 
         <div class="tab boosting-list-tab">
             <ul class="tabs">

@@ -22,7 +22,6 @@ if( class_exists( 'CSF' ) ) {
         return $freelancershub_metabox;
     }
 
-    //
     // Create a metabox
     CSF::createMetabox( $freelancershub_metabox, array(
         'title'     => __('Features Section', 'freelancershub'),
@@ -33,29 +32,6 @@ if( class_exists( 'CSF' ) ) {
 
     // Create a section
     CSF::createSection( $freelancershub_metabox, array(
-        'title'     => __('Left Section', 'freelancershub'),
-        'fields' => array(
-            // A text field
-            array(
-                'id'    => 'video_feat_image',
-                'type'  => 'upload',
-                'title' => __('Image Upload', 'freelancershub'),
-
-            ),
-            array(
-                'id'    => 'features_video_link',
-                'type'  => 'text',
-                'title' => __('Video Link', 'freelancershub'),
-
-            ),
-
-
-        )
-    ) );
-
-    // Create a section
-    CSF::createSection( $freelancershub_metabox, array(
-        'title'     => __('Right Section', 'freelancershub'),
         'fields' => array(
             // A text field
             array(
@@ -65,9 +41,27 @@ if( class_exists( 'CSF' ) ) {
 
             ),
             array(
+                'id'    => 'freelancershub_features_subtitle',
+                'type'  => 'text',
+                'title' => __('Section Sub Title Text', 'freelancershub'),
+
+            ),
+            array(
                 'id'    => 'freelancershub_features_description',
                 'type'  => 'textarea',
                 'title' => __('Section Description', 'freelancershub'),
+
+            ),
+            array(
+                'id'    => 'freelancershub_features_btn_text',
+                'type'  => 'text',
+                'title' => __('Section Button Text', 'freelancershub'),
+
+            ),
+            array(
+                'id'    => 'freelancershub_features_btn_url',
+                'type'  => 'text',
+                'title' => __('Section Button URL', 'freelancershub'),
 
             ),
             array(
@@ -77,8 +71,13 @@ if( class_exists( 'CSF' ) ) {
                 'fields'    => array(
                     array(
                         'id'    => 'features_name',
-                        'type'  => 'textarea',
+                        'type'  => 'text',
                         'title' => __('Features Name','freelancershub')
+                    ),
+                    array(
+                        'id'    => 'features_description',
+                        'type'  => 'textarea',
+                        'title' => __('Features description','freelancershub')
                     ),
 
                 ),

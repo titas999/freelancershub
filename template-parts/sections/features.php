@@ -2,6 +2,7 @@
 global $freelancershub_section_id;
 $freelancershub_section_meta = get_post_meta($freelancershub_section_id,'freelancershub_section_features',true);
 $freelancershub_features_heading = $freelancershub_section_meta['freelancershub_features_title'];
+$freelancershub_features_subheading = $freelancershub_section_meta['freelancershub_features_subtitle'];
 $freelancershub_features_description = $freelancershub_section_meta['freelancershub_features_description'];
 
 ?>
@@ -11,18 +12,26 @@ $freelancershub_features_description = $freelancershub_section_meta['freelancers
         <div class="row align-items-center">
             <div class="col-lg-5 col-md-12">
                 <div class="features-content-area">
-                    <span>Care Features</span>
-                    <h3>Create Awesome Service With Our Tools</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </p>
-
+                    <span><?php echo esc_html($freelancershub_features_subheading);?></span>
+                    <h3><?php echo esc_html($freelancershub_features_heading);?></h3>
+                    <?php echo apply_filters('the_content', $freelancershub_features_description);?>
+                    <?php $features_btn_text = $freelancershub_section_meta['freelancershub_features_btn_text'];
+                    if ($features_btn_text){
+                    ?>
                     <div class="features-btn">
-                        <a href="#" class="features-btn-one">More Details</a>
+                        <a href="<?php echo esc_url($freelancershub_section_meta['freelancershub_features_btn_url']);?>" class="features-btn-one"><?php echo esc_html($features_btn_text);?></a>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
 
             <div class="col-lg-7 col-md-12">
                 <div class="row">
+                    <?php
+                    $color = array(
+                            'bg-f1eff8','bg-fbe6d4','bg-f0fffc','bg-f8e1eb'
+                    )
+                    ?>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-features-item bg-f1eff8">
                             <div class="icon">
