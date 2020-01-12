@@ -1241,13 +1241,13 @@ Main Banner Area CSS
 }
 
 .banner-bg-text {
-  font-size: 200px;
+  font-size: 98px;
   color: #f9f8fc;
   font-weight: bold;
   position: absolute;
   bottom: 0;
   right: 0;
-  left: 30%;
+  left: 20%;
   font-family: 'Poppins', sans-serif;
   line-height: 1;
 }

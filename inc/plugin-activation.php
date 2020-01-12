@@ -64,18 +64,18 @@ function topnotch_register_required_plugins() {
             'source'    =>  get_theme_file_path("/plugins/codestar-framework.zip"),
             'required'  => true,
         ),
-        array(
-            'name'      => 'Elementor Pro',
-            'slug'      => 'elementor-pro',
-            'source'    =>  get_theme_file_path("/plugins/elementor-pro.zip"),
-            'required'  => false,
-        ),
-
-		 array(
-		 	'name'        => 'Elementor',
-		 	'slug'        => 'elementor',
-             'required'   => false,
-		 ),
+//        array(
+//            'name'      => 'Elementor Pro',
+//            'slug'      => 'elementor-pro',
+//            'source'    =>  get_theme_file_path("/plugins/elementor-pro.zip"),
+//            'required'  => false,
+//        ),
+//
+//		 array(
+//		 	'name'        => 'Elementor',
+//		 	'slug'        => 'elementor',
+//             'required'   => false,
+//		 ),
 
 	);
 
