@@ -47,6 +47,12 @@ if( class_exists( 'CSF' ) ) {
                 'title' => __('Section Subtitle', 'freelancershub'),
 
             ),
+            array(
+                'id'    => 'freelancershub_testimonial_section_content',
+                'type'  => 'textarea',
+                'title' => __('Section Content', 'freelancershub'),
+
+            ),
 
         )
     ) );

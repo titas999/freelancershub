@@ -37,7 +37,7 @@ if( class_exists( 'CSF' ) ) {
             // A text field
             array(
                 'id'    => 'freelancershub_banner_title',
-                'type'  => 'textarea',
+                'type'  => 'text',
                 'title' => __('Banner Title Text', 'freelancershub'),
 
             ),
@@ -57,6 +57,12 @@ if( class_exists( 'CSF' ) ) {
                 'id'    => 'freelancershub_banner_btn_url',
                 'type'  => 'text',
                 'title' => __('Banner Button URL', 'freelancershub'),
+
+            ),
+            array(
+                'id'    => 'freelancershub_banner_image',
+                'type'  => 'upload',
+                'title' => __('Banner Image', 'freelancershub'),
 
             ),
 

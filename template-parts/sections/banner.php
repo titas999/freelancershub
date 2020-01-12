@@ -15,13 +15,19 @@ $freelancershub_banner_button_url = $freelancershub_section_meta['freelancershub
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <div class="main-banner-content">
-                            <h1>Digital Agency with Excellence Service</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,  eiusmod tempor incididunt ut labore.</p>
-
+                            <?php if ($freelancershub_banner_heading){ ?>
+                                <h1><?php echo esc_html($freelancershub_banner_heading);?></h1>
+                            <?php
+                            }
+                            echo apply_filters('the_content', $freelancershub_banner_description);
+                            if ($freelancershub_banner_button_text){
+                            ?>
                             <div class="banner-btn">
-                                <a href="#" class="default-btn-one">More About Us</a>
-                                <a href="https://www.youtube.com/watch?v=_ysd-zHamjk" class="video-btn popup-youtube">Watch Video <i class="flaticon-play-button"></i></a>
+                                <a href="<?php echo esc_url($freelancershub_banner_button_url);?>" class="default-btn-one">
+                                    <?php echo esc_html($freelancershub_banner_button_text);?>
+                                </a>
                             </div>
+                            <?php } ?>
                         </div>
                     </div>
 
@@ -47,7 +53,7 @@ $freelancershub_banner_button_url = $freelancershub_section_meta['freelancershub
                     </div>
                 </div>
 
-                <div class="banner-bg-text">Freelancers Hub</div>
+                <div class="banner-bg-text"><?php _e('Freelancers Hub','freelancershub'); ?></div>
             </div>
         </div>
     </div>

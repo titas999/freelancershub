@@ -36,46 +36,45 @@ if( class_exists( 'CSF' ) ) {
         'fields' => array(
             // A text field
             array(
-                'id'    => 'freelancershub_about_title',
-                'type'  => 'text',
-                'title' => __('About Title Text', 'freelancershub'),
-
-            ),
-            array(
                 'id'    => 'freelancershub_about_subtitle',
                 'type'  => 'text',
                 'title' => __('About Subtitle Text', 'freelancershub'),
 
             ),
             array(
-                'id'    => 'freelancershub_about_content_heading',
+                'id'    => 'freelancershub_about_title',
                 'type'  => 'text',
-                'title' => __('Content Title', 'freelancershub'),
+                'title' => __('About Title Text', 'freelancershub'),
 
             ),
             array(
                 'id'    => 'freelancershub_about_content',
                 'type'  => 'textarea',
-                'title' => __('About Main Content', 'freelancershub'),
-
-            ),
-            array(
-                'id'    => 'freelancershub_about_btn_text',
-                'type'  => 'text',
-                'title' => __('Button text', 'freelancershub'),
-
-            ),
-            array(
-                'id'    => 'freelancershub_about_btn_url',
-                'type'  => 'text',
-                'title' => __('Button URL', 'freelancershub'),
+                'title' => __('About Section Content', 'freelancershub'),
 
             ),
             array(
                 'id'    => 'freelancershub_about_image',
                 'type'  => 'upload',
                 'title' => __('Upload Image','freelancershub')
-              ),
+            ),
+            array(
+                'id'        => 'about_group',
+                'type'      => 'group',
+                'title'     => __('About Counter','freelancershub'),
+                'fields'    => array(
+                    array(
+                        'id'    => 'counter_number',
+                        'type'  => 'text',
+                        'title' => __('Number','freelancershub')
+                    ),
+                    array(
+                        'id'    => 'counter_name',
+                        'type'  => 'text',
+                        'title' => __('Counter Item Name','freelancershub')
+                    ),
+                ),
+            ),
 
         )
     ) );

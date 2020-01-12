@@ -8,122 +8,83 @@ $freelancershub_blog_subheading = $freelancershub_section_meta['freelancershub_l
 
 <section class="blog-section">
     <div class="container">
+        <?php if ($freelancershub_blog_heading){ ?>
         <div class="section-title">
-            <span>Blog</span>
-            <h3>Read Our Latest Project</h3>
+            <span><?php echo esc_html($freelancershub_blog_subheading);?></span>
+            <h3><?php echo esc_html($freelancershub_blog_heading);?></h3>
         </div>
+        <?php } ?>
 
         <div class="row">
+            <?php
+            $args = array(
+                'posts_per_page' => 3,
+                'ignore_sticky_posts' => 1,
+                'paged' => $paged
+            );
+
+            $query = new WP_Query($args);
+            if (have_posts()):
+            while ($query->have_posts()):
+            $query->the_post();
+            ?>
             <div class="col-lg-4 col-md-6">
                 <div class="blog-item">
                     <div class="blog-image">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/1.png" alt="image">
-                        </a>
+                        <?php
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail();
+                        }
+                        ?>
                     </div>
 
                     <div class="single-blog-item">
                         <ul class="date">
-                            <li>21</li>
-                            <li>November</li>
+                            <li><?php echo get_the_date();?></li>
                         </ul>
 
                         <ul class="blog-list">
                             <li>
-                                <a href="#"><i class="fa fa-user-alt"></i> By admin</a>
+                                <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><i class="fa fa-user-alt"></i><?php echo (get_the_author_meta('display_name')); ?></a>
                             </li>
                             <li>
-                                <i class="far fa-comments"></i> 3 Comments
+                                <i class="far fa-comments"></i>
+                                <?php
+                                $freelancershub_comment_count = get_comments_number();
+                                if ($freelancershub_comment_count<=1) {
+                                    printf(
+                                        $freelancershub_comment_count .' '.
+                                        esc_html__( 'Comment', 'freelancershub' )
+                                    );
+                                } else {
+                                    printf(
+                                        $freelancershub_comment_count.' '.
+                                        esc_html__( 'Comments', 'freelancershub' )
+                                    );
+                                }
+                                ?>
                             </li>
                         </ul>
 
                         <div class="blog-content">
-                            <a href="#">
-                                <h3>Startup Marketing Solution for Business Owner</h3>
+                            <a href="<?php the_permalink(); ?>">
+                                <h3><?php the_title(); ?></h3>
                             </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  incididunt slice</p>
+                            <p><?php the_excerpt(); ?></p>
                         </div>
 
                         <div class="blog-btn">
-                            <a href="#" class="blog-btn-one">Read More</a>
+                            <a href="<?php the_permalink(); ?>" class="blog-btn-one"><?php _e('Read More','freelancershub'); ?></a>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php
+            endwhile;
+            endif;
+            wp_reset_query();
+            ?>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="blog-item">
-                    <div class="blog-image">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/2.png" alt="image">
-                        </a>
-                    </div>
-
-                    <div class="single-blog-item">
-                        <ul class="date">
-                            <li>21</li>
-                            <li>November</li>
-                        </ul>
-
-                        <ul class="blog-list">
-                            <li>
-                                <a href="#"><i class="fa fa-user-alt"></i> By admin</a>
-                            </li>
-                            <li>
-                                <i class="far fa-comments"></i> 3 Comments
-                            </li>
-                        </ul>
-
-                        <div class="blog-content">
-                            <a href="#">
-                                <h3>How To Boost Your Digital Marketing Agency</h3>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  incididunt slice</p>
-                        </div>
-
-                        <div class="blog-btn">
-                            <a href="#" class="blog-btn-one">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
-                <div class="blog-item">
-                    <div class="blog-image">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/3.png" alt="image">
-                        </a>
-                    </div>
-
-                    <div class="single-blog-item">
-                        <ul class="date">
-                            <li>21</li>
-                            <li>November</li>
-                        </ul>
-
-                        <ul class="blog-list">
-                            <li>
-                                <a href="#"><i class="fa fa-user-alt"></i> By admin</a>
-                            </li>
-                            <li>
-                                <i class="far fa-comments"></i> 3 Comments
-                            </li>
-                        </ul>
-
-                        <div class="blog-content">
-                            <a href="#">
-                                <h3>Creative solutions to improve your business!</h3>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  incididunt slice</p>
-                        </div>
-
-                        <div class="blog-btn">
-                            <a href="#" class="blog-btn-one">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

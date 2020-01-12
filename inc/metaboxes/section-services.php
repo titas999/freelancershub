@@ -47,34 +47,6 @@ if( class_exists( 'CSF' ) ) {
                 'title' => __('Section Subtitle Text', 'freelancershub'),
 
             ),
-            array(
-                'id'        => 'services_group',
-                'type'      => 'group',
-                'title'     => __('Services','freelancershub'),
-                'fields'    => array(
-                    array(
-                    'id'    => 'service_name',
-                    'type'  => 'text',
-                    'title' => __('Service Name','freelancershub')
-                    ),
-                    array(
-                    'id'    => 'service_image',
-                    'type'  => 'upload',
-                    'title' => __('Upload Service Image','freelancershub')
-                    ),
-                
-                    array(
-                    'id'    => 'service_short_description',
-                    'type'  => 'textarea',
-                    'title' => __('Service Short Description','freelancershub')
-                    ),
-                    array(
-                        'id'    => 'service_page_url',
-                        'type'  => 'text',
-                        'title' => __('Page URL','freelancershub')
-                    ),
-                ),
-              ),
 
         )
     ) );

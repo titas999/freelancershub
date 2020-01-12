@@ -7,10 +7,12 @@ $freelancershub_services_subheading = $freelancershub_section_meta['freelancersh
 
 <section class="services-section">
     <div class="container">
+        <?php if ($freelancershub_services_heading){ ?>
         <div class="section-title">
-            <span>Services</span>
-            <h3>How We Can Help?</h3>
+            <span><?php echo esc_html($freelancershub_services_subheading);?></span>
+            <h3><?php echo esc_html($freelancershub_services_heading);?></h3>
         </div>
+        <?php } ?>
 
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">

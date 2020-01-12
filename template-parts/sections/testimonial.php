@@ -3,6 +3,7 @@ global $freelancershub_section_id;
 $freelancershub_section_meta = get_post_meta($freelancershub_section_id,'freelancershub_section_testimonial',true);
 $freelancershub_testimonial_heading = $freelancershub_section_meta['freelancershub_testimonial_section_title'];
 $freelancershub_testimonial_subheading = $freelancershub_section_meta['freelancershub_testimonial_section_subtitle'];
+$freelancershub_testimonial_content = $freelancershub_section_meta['freelancershub_testimonial_section_content'];
 
 ?>
 
@@ -10,11 +11,13 @@ $freelancershub_testimonial_subheading = $freelancershub_section_meta['freelance
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4">
+                <?php if ($freelancershub_testimonial_heading){ ?>
                 <div class="testimonial-content-area">
-                    <span>Testimonial</span>
-                    <h3>What Our Client Say</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus.Lorem  is simply dummy text of the printing and typesetting industry.</p>
+                    <span><?php echo esc_html($freelancershub_testimonial_subheading);?></span>
+                    <h3><?php echo esc_html($freelancershub_testimonial_heading);?></h3>
+                    <?php echo apply_filters('the_content', $freelancershub_testimonial_content);?>
                 </div>
+                <?php } ?>
             </div>
 
             <div class="col-lg-8">

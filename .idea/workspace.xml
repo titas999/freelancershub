@@ -2,47 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52020514-c83f-4d4e-95ce-84942f1f949b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-about.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-banner.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-blog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-call2action.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-counter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-features.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-partner.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-projects.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-reports.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-subscription.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-tab.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-team.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-testimonial.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section-whychoose.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inc/metaboxes/section.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page-templates/landing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/codestar-framework.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/about.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/banner.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/blog.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/features.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/partner.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/projects.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/subscription.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/tab.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/team.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/testimonial.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-parts/sections/whychoose.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/plugin-activation.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/plugin-activation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/metaboxes/section-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/metaboxes/section-about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/metaboxes/section-banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/metaboxes/section-banner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/metaboxes/section-call2action.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/metaboxes/section-services.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/metaboxes/section-services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/metaboxes/section-testimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/metaboxes/section-testimonial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/metaboxes/section-whychoose.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/metaboxes/section-whychoose.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/sections/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/sections/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/sections/banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/sections/banner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/sections/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/sections/blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/sections/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/sections/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/sections/testimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/sections/testimonial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-parts/sections/whychoose.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-parts/sections/whychoose.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578756852457</updated>
-      <workItem from="1578756853714" duration="8929000" />
+      <workItem from="1578756853714" duration="15126000" />
     </task>
     <servers />
   </component>
