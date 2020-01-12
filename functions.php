@@ -45,9 +45,6 @@ if ( ! function_exists( 'freelancershub_setup' ) ) :
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus( array(
             'primary_menu' => esc_html__( 'Primary Menu', 'freelancershub' ),
-            'seo_services' => esc_html__( 'SEO Services', 'freelancershub' ),
-            'target_market' => esc_html__( 'Target Market', 'freelancershub' ),
-            'woocommerce_seo' => esc_html__( 'Woocommerce SEO', 'freelancershub' ),
         ) );
 
         /*

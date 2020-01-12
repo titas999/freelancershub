@@ -6870,7 +6870,17 @@ Contact Section CSS
   transition: all .3s ease;
   background: #f3f5fe;
 }
-
+#contactForm .form-bg-white .form-control {
+  height: 50px;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px solid #f3f5fe;
+  outline: 0;
+  border-radius: 5px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background: #fff;
+}
 #contactForm .form-group .form-control:focus {
   color: #666666;
   background-color: #ffffff;

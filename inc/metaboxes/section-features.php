@@ -79,6 +79,11 @@ if( class_exists( 'CSF' ) ) {
                         'type'  => 'textarea',
                         'title' => __('Features description','freelancershub')
                     ),
+                    array(
+                        'id'    => 'features_icon_class',
+                        'type'  => 'text',
+                        'title' => __('Icon Class','freelancershub')
+                    ),
 
                 ),
             ),
