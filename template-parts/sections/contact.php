@@ -1,52 +1,37 @@
+<?php
+global $freelancershub_section_id;
+$freelancershub_section_meta = get_post_meta($freelancershub_section_id,'freelancershub_section_contact',true);
+$freelancershub_contact_section_heading = $freelancershub_section_meta['freelancershub_ct_form_title'];
+$freelancershub_contact_section_content = $freelancershub_section_meta['freelancershub_ct_form_description'];
+
+?>
 <section class="subscribe-area">
     <div class="container">
         <div class="row align-items-center">
+            <?php
+            $freelancershub_contact_forms = $freelancershub_section_meta['contact_section_group'];
+            if (is_array($freelancershub_contact_forms)){
+                foreach ($freelancershub_contact_forms as $freelancershub_contact_form){
+
+            ?>
             <div class="col-lg-4 col-md-12">
                 <div class="contact-box">
                     <div class="icon">
-                        <i class="fa fa-phone"></i>
+                        <i class="<?php echo esc_html($freelancershub_contact_form['address_item_icon'])?>"></i>
                     </div>
 
                     <div class="content">
-                        <h4>Phone / Fax</h4>
-                        <p><a href="">(+021) 245522455</a></p>
-                        <p><a href="#">(+000) 245522455</a></p>
+                        <h4><?php echo esc_html($freelancershub_contact_form['address_item_title'])?></h4>
+                        <?php echo apply_filters('the_content', $freelancershub_contact_form['address_item_content']);?>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-12">
-                <div class="contact-box">
-                    <div class="icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-
-                    <div class="content">
-                        <h4>E-mail</h4>
-                        <p><a href="#">hello@freelancershub.com </a></p>
-                        <p><a href="#">support@freelancershub.com</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-12">
-                <div class="contact-box">
-                    <div class="icon">
-                        <i class="fa fa-map-marker"></i>
-                    </div>
-
-                    <div class="content">
-                        <h4>Location</h4>
-                        <p>2750 Quadra Street , Park Area, <span>Victoria, Canada.</span></p>
-                    </div>
-                </div>
-            </div>
+            <?php }} ?>
 
             <div class="col-lg-6 col-md-6">
                 <div class="contact-text">
-                    <h3>Get in Touch</h3>
-                    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus magna vel turpis pharetra dictum.</p>
-                    <p>Sed blandit tempus purus, sed sodales leo rutrum vel. Nam vulputate ipsum ac est congue, eget commodo magna lobortis.</p>
+                    <h3><?php echo esc_html($freelancershub_contact_section_heading);?></h3>
+                    <?php echo apply_filters('the_content', $freelancershub_contact_section_content); ?>
                 </div>
             </div>
 
