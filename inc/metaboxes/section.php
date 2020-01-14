@@ -37,7 +37,7 @@ if( class_exists( 'CSF' ) ) {
                     'contact'    =>__('Contact Section', 'freelancershub'),
                     'blog'    =>__('Latest Blog Section', 'freelancershub'),
                     'partner'    =>__('Partner Section', 'freelancershub'),
-                    'subscription'    =>__('Newsletter Section', 'freelancershub'),
+                    'analysis'    =>__('SEO Analysis Section', 'freelancershub'),
                 )
             ),
 

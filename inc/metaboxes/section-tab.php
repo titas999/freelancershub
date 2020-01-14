@@ -48,19 +48,29 @@ if( class_exists( 'CSF' ) ) {
 
             ),
             array(
-                'id'        => 'counter_group',
+                'id'        => 'freelancershub_tab_group',
                 'type'      => 'group',
                 'title'     => __('Items','freelancershub'),
                 'fields'    => array(
                     array(
-                        'id'    => 'item_name',
+                        'id'    => 'tab_item_name',
                         'type'  => 'text',
-                        'title' => __('Item Name','freelancershub')
+                        'title' => __('Tab Item Name','freelancershub')
                     ),
                     array(
-                        'id'    => 'counter_number',
-                        'type'  => 'text',
-                        'title' => __('Total Number','freelancershub')
+                        'id'    => 'tab_item_icon',
+                        'type'  => 'icon',
+                        'title' => __('Tab Icon','freelancershub')
+                    ),
+                    array(
+                        'id'    => 'tab_item_content',
+                        'type'  => 'wp_editor',
+                        'title' => __('Tab Content','freelancershub')
+                    ),
+                    array(
+                        'id'    => 'tab_item_content_image',
+                        'type'  => 'upload',
+                        'title' => __('Content Image','freelancershub')
                     ),
 
                 ),
