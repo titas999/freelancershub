@@ -196,6 +196,14 @@ function freelancershub_scripts() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
+
+    if (is_page() || is_single() || is_home()) {
+        $white_bg_nav = "
+                .freelancershub-nav{
+                        background-color: #fff;
+                }";
+        wp_add_inline_style('main-style', $white_bg_nav);
+    }
 }
 add_action( 'wp_enqueue_scripts', 'freelancershub_scripts' );
 

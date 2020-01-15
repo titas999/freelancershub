@@ -46,27 +46,15 @@ while (have_posts()):
                         <?php the_content(); ?>
                     </div>
 
-                    <div class="article-footer">
-
-                        <div class="article-share">
-                            <ul class="social">
-                                <li><span>Share:</span></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
 
                     <div class="post-navigation">
                         <div class="navigation-links">
                             <div class="nav-previous">
-                                <a href="#"><i class="fa fa-arrow-left"></i> Prev Post</a>
+                                <?php previous_post_link('%link', '« Previous Post'); ?>
                             </div>
 
                             <div class="nav-next">
-                                <a href="#">Next Post <i class="fa fa-arrow-right"></i></a>
+                                <?php next_post_link('%link', 'Next Post »'); ?>
                             </div>
                         </div>
                     </div>

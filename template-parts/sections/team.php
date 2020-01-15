@@ -6,14 +6,31 @@
         </div>
 
         <div class="row">
+            <?php
+
+            $args = array(
+                'posts_per_page' => 3,
+                'ignore_sticky_posts' => 1,
+                'post_type' => 'teammember',
+                'paged' => $paged
+            );
+
+            $query = new WP_Query($args);
+            if (have_posts()) {
+            while ($query->have_posts()) {
+            $query->the_post();
+
+            ?>
             <div class="col-lg-4 col-md-6">
                 <div class="team-item-area">
                     <div class="team-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/1.png" alt="image">
+                        <?php if (has_post_thumbnail()){
+                            the_post_thumbnail();
+                        } ?>
                     </div>
 
                     <div class="team-content">
-                        <h3>Edward Bold</h3>
+                        <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
                         <span>CEO & Founder</span>
 
                         <ul class="team-social">
@@ -44,84 +61,12 @@
                     </div>
                 </div>
             </div>
+                <?php
+            }
+            }
+            wp_reset_query();
+            ?>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="team-item-area">
-                    <div class="team-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/2.png" alt="image">
-                    </div>
-
-                    <div class="team-content">
-                        <h3>Calvin Klein</h3>
-                        <span>Marketing Support</span>
-
-                        <ul class="team-social">
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-facebook-logo"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-twitter"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-paypal"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-linkedin-letters"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
-                <div class="team-item-area">
-                    <div class="team-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/team/3.png" alt="image">
-                    </div>
-
-                    <div class="team-content">
-                        <h3>Alastair Cook</h3>
-                        <span>Underwriter</span>
-
-                        <ul class="team-social">
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-facebook-logo"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-twitter"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-paypal"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="flaticon-linkedin-letters"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
