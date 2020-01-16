@@ -162,37 +162,36 @@ function cptui_register_my_cpts() {
     register_post_type( "webapps", $args );
 
     /**
-     * Post Type: Apps Services
+     * Post Type: Team Members
      */
-//    $labels = array(
-//        "name" => __( "App Services", "freelancershub" ),
-//        "singular_name" => __( "App Service", "freelancershub" ),
-//    );
-//    $args = array(
-//        "label" => __( "App Services", "freelancershub" ),
-//        "labels" => $labels,
-//        "description" => "",
-//        "public" => true,
-//        "publicly_queryable" => true,
-//        "show_ui" => true,
-//        "delete_with_user" => false,
-//        "show_in_rest" => true,
-//        "rest_base" => "",
-//        "rest_controller_class" => "WP_REST_Posts_Controller",
-//        "has_archive" => true,
-//        "show_in_menu" => true,
-//        "show_in_nav_menus" => true,
-//        "exclude_from_search" => false,
-//        "capability_type" => "post",
-//        "map_meta_cap" => true,
-//        "hierarchical" => false,
-//        "rewrite" => array( "slug" => "app-service", "with_front" => true ),
-//        "query_var" => true,
-//        "menu_icon" => "dashicons-smartphone",
-//        "supports" => array( "title", "editor", "thumbnail" ),
-//        "taxonomies" => array( "category" ),
-//    );
-//    register_post_type( "appservice", $args );
+    $labels = array(
+        "name" => __( "Team Members", "freelancershub" ),
+        "singular_name" => __( "Team Member", "freelancershub" ),
+    );
+    $args = array(
+        "label" => __( "Team Member", "freelancershub" ),
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "publicly_queryable" => true,
+        "show_ui" => true,
+        "delete_with_user" => false,
+        "show_in_rest" => true,
+        "rest_base" => "",
+        "rest_controller_class" => "WP_REST_Posts_Controller",
+        "has_archive" => true,
+        "show_in_menu" => true,
+        "show_in_nav_menus" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array( "slug" => "team-member", "with_front" => true ),
+        "query_var" => true,
+        "menu_icon" => "dashicons-admin-users",
+        "supports" => array( "title", "editor", "thumbnail" ),
+    );
+    register_post_type( "teammember", $args );
 
     /**
      * Post Type: Digital Marketing

@@ -108,46 +108,46 @@ function freelancershub_widgets_init() {
         'name'          => esc_html__( 'Sidebar 1', 'freelancershub' ),
         'id'            => 'sidebar-1',
         'description'   => esc_html__( 'Add widgets here.', 'freelancershub' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="footer-heading"><h3>',
+        'after_title'   => '</div></h3>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Sidebar 2', 'freelancershub' ),
         'id'            => 'sidebar-2',
         'description'   => esc_html__( 'Add widgets here.', 'freelancershub' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="footer-heading"><h3>',
+        'after_title'   => '</div></h3>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Sidebar 3', 'freelancershub' ),
         'id'            => 'sidebar-3',
         'description'   => esc_html__( 'Add widgets here.', 'freelancershub' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="footer-heading"><h3>',
+        'after_title'   => '</div></h3>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Sidebar 4', 'freelancershub' ),
         'id'            => 'sidebar-4',
         'description'   => esc_html__( 'Add widgets here.', 'freelancershub' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="footer-heading"><h3>',
+        'after_title'   => '</div></h3>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Blog Sidebar', 'freelancershub' ),
         'id'            => 'blog-sidebar',
         'description'   => esc_html__( 'Add widgets here.', 'freelancershub' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'before_widget' => '<section id="%1$s" class="widget %2$s widget_zash_posts_thumb">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
         'name'          => esc_html__( 'Contact Sidebar', 'freelancershub' ),
@@ -195,6 +195,14 @@ function freelancershub_scripts() {
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
+    }
+
+    if (is_page() || is_single() || is_home()) {
+        $white_bg_nav = "
+                .freelancershub-nav{
+                        background-color: #fff;
+                }";
+        wp_add_inline_style('main-style', $white_bg_nav);
     }
 }
 add_action( 'wp_enqueue_scripts', 'freelancershub_scripts' );
@@ -248,9 +256,9 @@ require_once(get_theme_file_path('/inc/metaboxes/section-projects.php'));
 require_once(get_theme_file_path('/inc/metaboxes/section-contact.php'));
 require_once(get_theme_file_path('/inc/metaboxes/section-partner.php'));
 require_once(get_theme_file_path('/inc/metaboxes/section-team.php'));
-require_once(get_theme_file_path('/inc/metaboxes/section-subscription.php'));
+require_once(get_theme_file_path('/inc/metaboxes/section-analysis.php'));
 //
-//require_once(get_theme_file_path('/inc/options/freelancershub-options.php'));
+require_once(get_theme_file_path('/inc/options/freelancershub-options.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/freelancershub-services.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/web-apps-details.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/services.php'));
@@ -259,6 +267,8 @@ require_once(get_theme_file_path('/inc/metaboxes/section-subscription.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/ppc-services.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/seo-services.php'));
 //require_once(get_theme_file_path('/inc/metaboxes/smm-services.php'));
+
+require_once (get_theme_file_path('/widgets/social-icons-widget.php'));
 
 function freelancershub_pagination()
 {
@@ -272,7 +282,6 @@ function freelancershub_pagination()
         'next_text' => __('<i class="fa fa-arrow-right"></i>', 'freelancershub'),
 
     ));
-    $links = str_replace("page-numbers", "post-navigation", $links);
     echo wp_kses_post($links);
 
 }

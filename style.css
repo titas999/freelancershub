@@ -19,3 +19,35 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+.footer-item-area ul{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.footer-item-area ul li{
+    list-style-type: none;
+    padding-bottom: 16px;
+}
+.footer-item-area ul li a{
+    color: #fff;
+}
+.copyright-area ul {
+    color: #fff;
+}
+.copyright-area ul a {
+    color: #fff;
+}
+.freelancershub-nav .navbar .others-options {
+    /* margin-left: 30px; */
+    float: right;
+    margin-top: 5px;
+}
+.menu-main-menu-container {
+    float: left;
+    width: 84%;
+}
+.freelancershub-nav .navbar .navbar-nav {
+    margin: 0;
+    float: right;
+    padding-right: 50px;
+}

@@ -39,10 +39,12 @@
                 } ?>
 
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+
                     <?php
                     wp_nav_menu( array(
                         'theme_location' => 'primary_menu',
                         'menu_class'        => "navbar-nav",
+                        'menu_container'=> 'div'
                     ) );
                     ?>
 
@@ -69,6 +71,7 @@
                             <span></span>
                         </div>
                     </div>
+
                 </div>
             </nav>
         </div>
