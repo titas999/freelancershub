@@ -2760,7 +2760,7 @@ Analysis Section CSS
 Blog Section CSS
 =================================================*/
 .blog-section {
-  padding-bottom: 70px;
+  padding: 70px 0;
 }
 
 .blog-item {
@@ -5001,7 +5001,9 @@ Sidebar Widget Area CSS
 .widget-area .widget {
   margin-top: 35px;
 }
-
+.textwidget p {
+  color: #fff;
+}
 .widget-area .widget:first-child {
   margin-top: 0;
 }

@@ -103,7 +103,7 @@ get_header(); ?>
                                     <i class="flaticon-landing-page"></i>
                                 </div>
 
-                                <h3><?php the_title(); ?></h3>
+                                <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
                                 <p><?php the_excerpt(); ?></p>
                             </div>
                         </div>

@@ -1,18 +1,7 @@
 <?php
-global $freelancershub_section_id;
-$freelancershub_section_meta = get_post_meta($freelancershub_section_id, 'freelancershub_section_services', true);
-$freelancershub_services_heading = $freelancershub_section_meta['freelancershub_services_title'];
-$freelancershub_services_subheading = $freelancershub_section_meta['freelancershub_services_subtitle'];
-?>
-
+get_header(); ?>
 <section class="services-section">
     <div class="container">
-        <?php if ($freelancershub_services_heading) { ?>
-            <div class="section-title">
-                <span><?php echo esc_html($freelancershub_services_subheading); ?></span>
-                <h3><?php echo esc_html($freelancershub_services_heading); ?></h3>
-            </div>
-        <?php } ?>
 
         <div class="row">
             <?php
@@ -20,7 +9,7 @@ $freelancershub_services_subheading = $freelancershub_section_meta['freelancersh
             $args = array(
                 'posts_per_page' => 6,
                 'ignore_sticky_posts' => 1,
-                'post_type' => 'service',
+                'post_type' => 'dmservice',
                 'paged' => $paged
             );
 
@@ -61,3 +50,4 @@ $freelancershub_services_subheading = $freelancershub_section_meta['freelancersh
                                      alt="image"></div>
     </div>
 </section>
+<?php get_footer(); ?>

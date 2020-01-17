@@ -71,11 +71,11 @@ function topnotch_register_required_plugins() {
 //            'required'  => false,
 //        ),
 //
-//		 array(
-//		 	'name'        => 'Elementor',
-//		 	'slug'        => 'elementor',
-//             'required'   => false,
-//		 ),
+		 array(
+		 	'name'        => 'Elementor',
+		 	'slug'        => 'elementor',
+             'required'   => false,
+		 ),
 
 	);
 

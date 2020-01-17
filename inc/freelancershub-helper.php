@@ -218,7 +218,7 @@ function cptui_register_my_cpts() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => array( "slug" => "digital-marketing-service", "with_front" => true ),
+        "rewrite" => array( "slug" => "digital-marketing-services", "with_front" => true ),
         "query_var" => true,
         "menu_icon" => "dashicons-chart-area",
         "supports" => array( "title", "editor", "thumbnail" ),

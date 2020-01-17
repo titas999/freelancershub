@@ -2,7 +2,16 @@
 /**
  * Template Name: Team
  */
-get_header(); ?>
+get_header();
+
+$freelancershub_current_page_id = get_the_ID();
+$freelancershub_page_meta = get_post_meta($freelancershub_current_page_id, 'freelancershub_web_apps_details_meta', true);
+$freelancershub_page = get_post($freelancershub_current_page_id);
+$freelancershub_page_title = $freelancershub_page->post_title;
+$freelancershub_page_description = $freelancershub_page->post_content;
+
+
+?>
 
     <!-- Start Page Title Area -->
     <div class="page-title-area">
